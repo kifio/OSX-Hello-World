@@ -55,28 +55,6 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Timer" id="y3I-Eu-LaD">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Timer" id="tp0-1l-dji">
-                                    <items>
-                                        <menuItem title="Start" keyEquivalent="s" id="y9k-Rf-gpp">
-                                            <connections>
-                                                <action selector="startTimerMenuItemSelected:" target="Ady-hI-5gd" id="7Fq-XP-D07"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Stop" state="on" keyEquivalent="x" id="Ztn-Cv-eWH">
-                                            <connections>
-                                                <action selector="stopTimerMenuItemSelected:" target="Ady-hI-5gd" id="cOs-UO-ovq"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Reset" keyEquivalent="r" id="rXZ-dX-pbP">
-                                            <connections>
-                                                <action selector="resetTimerMenuItemSelected:" target="Ady-hI-5gd" id="bhf-Gg-D4w"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
@@ -120,13 +98,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="HelloWorld_osx" customModuleProvider="target">
-                    <connections>
-                        <outlet property="resetTimerMenuItem" destination="rXZ-dX-pbP" id="Mt6-Z8-Qbb"/>
-                        <outlet property="startTimerMenuItem" destination="y9k-Rf-gpp" id="89K-zR-33z"/>
-                        <outlet property="stopTimerMenuItem" destination="Ztn-Cv-eWH" id="38l-CV-zLN"/>
-                    </connections>
-                </customObject>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="HelloWorld_osx" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
