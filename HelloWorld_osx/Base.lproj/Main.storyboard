@@ -694,12 +694,166 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="kaM-10-1Xq" kind="relationship" relationship="window.shadowedContentViewController" id="WyA-Rz-4mN"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dRO-nm-lQW">
+            <objects>
+                <viewController id="kaM-10-1Xq" sceneMemberID="viewController">
+                    <view key="view" id="7lO-RH-z9O">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-1S-Kxm">
+                                <rect key="frame" x="2" y="216" width="196" height="32"/>
+                                <buttonCell key="cell" type="push" title="Hello World" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U1S-tn-jRj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="XfG-lQ-9wD" kind="modal" id="mMf-qK-x1e"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-JR-lK4">
+                                <rect key="frame" x="2" y="139" width="196" height="32"/>
+                                <buttonCell key="cell" type="push" title="Egg Controller" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wlo-3t-SfH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="6dL-mg-UBE" kind="modal" id="EVK-0R-7jH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="f6G-1S-Kxm" firstAttribute="leading" secondItem="7lO-RH-z9O" secondAttribute="leading" constant="8" id="4af-dI-cVQ"/>
+                            <constraint firstAttribute="trailing" secondItem="h2z-JR-lK4" secondAttribute="trailing" constant="8" id="9GG-Og-eav"/>
+                            <constraint firstItem="f6G-1S-Kxm" firstAttribute="top" secondItem="7lO-RH-z9O" secondAttribute="top" constant="56" id="FTZ-t6-wl0"/>
+                            <constraint firstItem="h2z-JR-lK4" firstAttribute="leading" secondItem="7lO-RH-z9O" secondAttribute="leading" constant="8" id="R3k-Nk-OE9"/>
+                            <constraint firstItem="h2z-JR-lK4" firstAttribute="top" secondItem="f6G-1S-Kxm" secondAttribute="bottom" constant="56" id="hg0-8B-4vC"/>
+                            <constraint firstAttribute="trailing" secondItem="f6G-1S-Kxm" secondAttribute="trailing" constant="8" id="sAQ-Hb-Izk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="Jzl-QG-dM8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="243"/>
+        </scene>
+        <!--Egg View Controller-->
+        <scene sceneID="IHa-7o-8ge">
+            <objects>
+                <viewController id="6dL-mg-UBE" customClass="EggViewController" customModule="HelloWorld_osx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="7ee-HP-dI5">
+                        <rect key="frame" x="0.0" y="0.0" width="346" height="471"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZY-qx-diI">
+                                <rect key="frame" x="0.0" y="0.0" width="346" height="60"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-OD-bMt">
+                                        <rect key="frame" x="0.0" y="-1" width="115" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Start" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FWX-7Z-xYx">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="24"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="startButtonClicked:" target="6dL-mg-UBE" id="M00-lP-lq5"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rjv-eP-tEK">
+                                        <rect key="frame" x="115" y="-1" width="116" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4W-lQ-zOH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="24"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="stopButtonClicked:" target="6dL-mg-UBE" id="xQh-ca-y7F"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-XG-FaJ">
+                                        <rect key="frame" x="231" y="-1" width="115" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="40b-Wn-Ck1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="24"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resetButtonClicked:" target="6dL-mg-UBE" id="OPs-fO-5H7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Jwd-KH-ffe"/>
+                                    <constraint firstAttribute="height" secondItem="2Nu-XG-FaJ" secondAttribute="height" id="RFI-IE-dDq"/>
+                                    <constraint firstAttribute="height" secondItem="Rjv-eP-tEK" secondAttribute="height" id="g1o-UA-S87"/>
+                                    <constraint firstItem="0BW-OD-bMt" firstAttribute="height" secondItem="yZY-qx-diI" secondAttribute="height" id="rHp-qx-MPX"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="114" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-aB-ad6">
+                                <rect key="frame" x="16" y="76" width="314" height="379"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bN0-2e-BLT">
+                                        <rect key="frame" x="50" y="261" width="215" height="118"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="6:00" id="iIL-g1-qh0">
+                                            <font key="font" metaFont="system" size="100"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L7z-kp-kuV">
+                                        <rect key="frame" x="20" y="0.0" width="274" height="147"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="stopped" id="z5X-HH-WZK"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="L7z-kp-kuV" firstAttribute="leading" secondItem="uGY-aB-ad6" secondAttribute="leading" constant="20" symbolic="YES" id="Cez-T0-MHR"/>
+                                    <constraint firstAttribute="trailing" secondItem="L7z-kp-kuV" secondAttribute="trailing" constant="20" symbolic="YES" id="gjH-en-SMt"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yZY-qx-diI" firstAttribute="top" secondItem="uGY-aB-ad6" secondAttribute="bottom" constant="16" id="68E-5O-EfO"/>
+                            <constraint firstAttribute="bottom" secondItem="yZY-qx-diI" secondAttribute="bottom" id="FWe-IW-IsA"/>
+                            <constraint firstAttribute="trailing" secondItem="uGY-aB-ad6" secondAttribute="trailing" constant="16" id="KiK-BJ-CRq"/>
+                            <constraint firstAttribute="trailing" secondItem="yZY-qx-diI" secondAttribute="trailing" id="MKw-xG-cmV"/>
+                            <constraint firstItem="uGY-aB-ad6" firstAttribute="top" secondItem="7ee-HP-dI5" secondAttribute="top" constant="16" id="QQl-QE-5Nd"/>
+                            <constraint firstItem="yZY-qx-diI" firstAttribute="leading" secondItem="7ee-HP-dI5" secondAttribute="leading" id="TcM-L7-H4n"/>
+                            <constraint firstItem="uGY-aB-ad6" firstAttribute="leading" secondItem="7ee-HP-dI5" secondAttribute="leading" constant="16" id="ny6-iR-eAw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eggImage" destination="L7z-kp-kuV" id="jXl-oN-6Yb"/>
+                        <outlet property="resetButton" destination="2Nu-XG-FaJ" id="y5o-Bj-MLg"/>
+                        <outlet property="startButton" destination="0BW-OD-bMt" id="dIf-rt-77p"/>
+                        <outlet property="stopButton" destination="Rjv-eP-tEK" id="HvC-on-t6B"/>
+                        <outlet property="timeLabel" destination="bN0-2e-BLT" id="MB0-Up-akZ"/>
+                    </connections>
+                </viewController>
+                <customObject id="2lk-CF-t4X" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="719.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -764,7 +918,10 @@
                     </textFieldCell>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="77" y="859"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stopped" width="128" height="128"/>
+    </resources>
 </document>
