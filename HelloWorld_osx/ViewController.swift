@@ -10,6 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var textField: NSTextField!
+    @IBOutlet weak var label: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,15 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func sayHelloClicked(_ sender: Any) {
+        
+        var name = textField.stringValue
+        if name.isEmpty {
+           name = "Melancholia"
+        }
+        
+        let greeting = "Hello, \(name)!"
+        label.stringValue = greeting
+    }
 }
 
